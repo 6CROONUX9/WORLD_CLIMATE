@@ -16,6 +16,7 @@ function App() {
   const [loaderConfi, setLoaderConfi] = useState(true)
   const [eventsDark, setEventsDark] = useState(false)
   const [lenguageIcon, setLenguageIcon] = useState(false)
+  const [eventIcono, setEventIcono] = useState(null)
 
 // funcion para la respuesta positiva del usuario
   const success = (pos) => {
@@ -66,10 +67,12 @@ function App() {
         document.documentElement.classList.remove("dark")
         localStorage.removeItem("dark")
         setEventsDark(false)
+        setEventIcono(<i className='bx bx-moon text-slate-950 text-3xl'></i>)
     }else{
       document.documentElement.classList.add("dark")
       localStorage.setItem("dark" , true)
       setEventsDark(true)
+      setEventIcono(<i className='bx bx-sun text-blue-500 text-3xl'></i>)
     }
 
     
@@ -78,7 +81,17 @@ function App() {
 
   const savedInfo = localStorage.getItem("dark")
 
-  savedInfo && document.documentElement.classList.add("dark")
+  //savedInfo && document.documentElement.classList.add("dark")
+
+  useEffect(() => {
+    if (savedInfo ) {
+      document.documentElement.classList.add("dark")
+      setEventIcono(<i className='bx bx-sun text-blue-500 text-3xl'></i>)
+    }else{
+      setEventIcono(<i className='bx bx-moon text-slate-950 text-3xl'></i>)
+    }
+  }, [])
+  
 
   const handleLanguage = () => {
     setLenguageIcon(!lenguageIcon)
@@ -117,7 +130,7 @@ const routerImageWeather = {
         <section className='flex'>
         <button onClick={handleChangeDarkMode} className=' text-white px-4 mb-4'>
         {
-          eventsDark ? <i class='bx bx-sun text-blue-500 text-3xl'></i> : <i className='bx bx-moon text-slate-950 text-3xl'></i>
+          eventIcono
         }
         </button>
 
@@ -134,7 +147,7 @@ const routerImageWeather = {
             
           />
           <div className='absolute top-[4px] left-[165px]'>
-          <i class='bx bx-world   text-2xl text-slate-500 dark:text-white hover:bx-spin'></i>
+          <i className='bx bx-world   text-2xl text-slate-500 dark:text-white hover:bx-spin'></i>
           </div>
           <button className="bg-blue-500 text-white dark:bg-white dark:text-blue-500 px-4 ">Buscar</button>
           </form>

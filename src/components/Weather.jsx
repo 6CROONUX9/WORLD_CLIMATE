@@ -33,7 +33,7 @@ return (
                 <h4 className="col-span-2 text-slate-600 dark:text-white" >{resultSearch?.weather[0].description}</h4>
                 <span className="text-4xl dark:text-white">{resultTempConversion}{isCelsius?"Cº":"Fº"}</span>
                 <div>
-                    <img src={`https://openweathermap.org/img/wn/${resultSearch?.weather[0].icon}@4x.png `} alt="" />
+                    <img src={resultSearch && `https://openweathermap.org/img/wn/${resultSearch?.weather[0].icon}@4x.png `} alt="" />
                 </div>
             </section>
 
@@ -65,7 +65,7 @@ return (
         </section>
 
 
-        <button onClick={handleChangeUnitTemp} className="mt-4 bg-blue-500 text-white dark:bg-white dark:text-blue-500  rounded-2xl  ">{isCelsius?"Cambiar a Fº":"Cambiar a Cº"}</button>
+        <button onClick={handleChangeUnitTemp} className="mt-4 bg-blue-500 text-white dark:bg-white dark:text-blue-500  rounded-2xl ">{isCelsius?"Cambiar a Fº":"Cambiar a Cº"}</button>
     </section>
 )
 }
