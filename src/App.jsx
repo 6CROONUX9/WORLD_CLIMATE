@@ -115,18 +115,18 @@ function App() {
         routerImageWeather[resultSearch?.weather[0].icon]
       } bg-center bg-cover`}
     >
-      <section className="flex flex-col  gap-4 sm:flex-row sm:justify-center sm:items-center">
+      <section className="flex flex-col  gap-4 sm:flex-row sm:justify-center sm:items-center  sm:p-2">
         <section className="flex">
           <button
             onClick={handleChangeDarkMode}
-            className=" text-white px-4 mb-4 hover:animate-wiggle"
+            className=" text-white px-4 mb-4 hover:animate-wiggle my-3"
           >
             {eventIcono}
           </button>
 
           <div
             onClick={handleLanguage}
-            className={` bg-cover   px-4 mb-4 w-8 h-8 ${
+            className={` bg-cover  my-3 px-4 mb-4 w-8 h-8 ${
               lenguageIcon
                 ? "bg-[url('/images/imgUs.png')]"
                 : "bg-[url('/images/imgCol.png')]"

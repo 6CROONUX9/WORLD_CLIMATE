@@ -22,7 +22,26 @@ const Weather = ({weatherInfo,countryInfo}) => {
 
     const resultTempConversion = isCelsius ? kelvinToCelsius(resultSearch?.main.temp): kelvinToFahrenheit(resultSearch?.main.temp)
 
-
+    const routerImageIcon = {
+        "02d": "/images/icon02d.png",
+        "01d": "/images/icon01d.png",
+        "03d": "/images/icon03d.png",
+        "04d": "/images/icon04d.png",
+        "09d": "/images/icon09d.png",
+        "10d": "/images/icon10d.png",
+        "11d": "/images/icon11d.png",
+        "13d": "/images/icon13d.png",
+        "50d": "/images/icon50d.png",
+        "01n": "/images/icon01n.png",
+        "02n": "/images/icon02n.png",
+        "03n": "/images/icon03n.png",
+        "04n": "/images/icon04n.png",
+        "09n": "/images/icon09n.png",
+        "10n": "/images/icon10n.png",
+        "11n": "/images/icon11n.png",
+        "13n": "/images/icon13n.png",
+        "50n": "/images/icon50n.png",
+    };
 
 return (
     <section className="text-center ">
@@ -32,8 +51,9 @@ return (
             <section className="bg-white/60 text-slate-600 dark:bg-slate-500/60 dark:text-white/60 rounded-2xl grid grid-cols-2 items-center">
                 <h4 className="col-span-2 text-slate-600 dark:text-white" >{resultSearch?.weather[0].description}</h4>
                 <span className="text-4xl dark:text-white">{resultTempConversion}{isCelsius?"Cº":"Fº"}</span>
-                <div>
-                    <img src={resultSearch && `https://openweathermap.org/img/wn/${resultSearch?.weather[0].icon}@4x.png `} alt="" />
+                <div className=" p-2 py-4">
+                <img src={resultSearch && `${routerImageIcon[resultSearch?.weather[0].icon]}`} alt="" />
+                    {/*<img src={resultSearch && `https://openweathermap.org/img/wn/${resultSearch?.weather[0].icon}@4x.png `} alt="" /> */}
                 </div>
             </section>
 
