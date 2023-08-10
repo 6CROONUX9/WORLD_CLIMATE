@@ -61,14 +61,14 @@ return (
 
         {/* seccion inferior */}
             <section className="bg-white/60 text-slate-600 dark:bg-slate-500/60 dark:text-white p-2 py-4 rounded-2xl grid grid-cols-3 items-center sm:grid-cols-1">
-                <article className="flex gap-2 items-center">
+                <article className="flex gap-2  items-center">
                     <div className="w-[18px]">
                         <img src="/images/img1.png" alt="" />
                     </div> 
-                    <span>{resultSearch?.wind.speed} m/s</span> 
+                    <span>{resultSearch?.wind.speed}m/s</span> 
                 </article>
 
-                <article className="flex gap-2 items-center">
+                <article className="flex gap-2 ms-4 sm:ms-0 items-center">
                     <div className="w-[18px]">
                         <img src="/images/img2.png" alt="" />
                     </div>

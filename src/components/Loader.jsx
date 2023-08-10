@@ -1,5 +1,5 @@
 const Loader = () => {
-  return (
+return (
     <section className="h-screen w-full dark:bg-white/60 bg-slate-500/60 absolute flex flex-col gap-4 justify-center items-center">
         <img className="animate-wiggle" src="/images/logoLoader.png" alt="" />
         {/* <img src="/images/imgLoader.png" alt="" /> */}
@@ -25,6 +25,6 @@ const Loader = () => {
         </div>
         
     </section>
-  )
+)
 }
 export default Loader
