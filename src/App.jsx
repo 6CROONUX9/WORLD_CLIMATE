@@ -61,12 +61,12 @@ function App() {
       document.documentElement.classList.remove("dark");
       localStorage.removeItem("dark");
       setEventsDark(false);
-      setEventIcono(<i className="bx bx-moon hover:animate-wiggle text-slate-950 text-3xl"></i>);
+      setEventIcono(<i className="bx bx-moon  text-slate-950 text-3xl"></i>);
     } else {
       document.documentElement.classList.add("dark");
       localStorage.setItem("dark", true);
       setEventsDark(true);
-      setEventIcono(<i className="bx bx-sun hover:animate-wiggle text-blue-500 text-3xl"></i>);
+      setEventIcono(<i className="bx bx-sun  text-blue-500 text-3xl"></i>);
     }
   };
 
@@ -119,7 +119,7 @@ function App() {
         <section className="flex">
           <button
             onClick={handleChangeDarkMode}
-            className=" text-white px-4 mb-4"
+            className=" text-white px-4 mb-4 hover:animate-wiggle"
           >
             {eventIcono}
           </button>
