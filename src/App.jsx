@@ -140,7 +140,7 @@ function App() {
         >
           <input
             id="countryName"
-            placeholder="clima de la region ..."
+            placeholder={lenguageIcon?"clima de la region ...":"climate of the region..."}
             className="text-black p-2 dark:bg-slate-500/60 dark:text-white dark:placeholder:text-white"
             type="text"
           />
@@ -150,14 +150,14 @@ function App() {
           </div>
 
           <button className="bg-blue-500 text-white dark:bg-white dark:text-blue-500 px-4 hover:bg-white hover:text-blue-500 border-2 border-transparent hover:border-2 hover:border-blue-500 ">
-            Buscar
+            {lenguageIcon?"Buscar":"Searh"}
           </button>
 
         </form>
       </section>
 
       {loaderConfi && <Loader />}
-      <Weather weatherInfo={weatherInfo} countryInfo={countryInfo} />
+      <Weather weatherInfo={weatherInfo} countryInfo={countryInfo} lenguageIcon={lenguageIcon} />
     </main>
   );
 }

@@ -1,6 +1,6 @@
 import { useState } from "react"
 
-const Weather = ({weatherInfo,countryInfo}) => {
+const Weather = ({weatherInfo,countryInfo,lenguageIcon}) => {
 
     const [isCelsius, setIsCelsius] = useState(true)
 
@@ -18,7 +18,9 @@ const Weather = ({weatherInfo,countryInfo}) => {
 
     const resultSearch = countryInfo === null  ? weatherInfo : countryInfo
 
-    console.log();
+    const resultChangeEs = isCelsius?"Cambiar a Fº":"Cambiar a Cº"
+
+    const resultChangeUs = isCelsius?"Change to Fº":"Change to Cº"
 
     const resultTempConversion = isCelsius ? kelvinToCelsius(resultSearch?.main.temp): kelvinToFahrenheit(resultSearch?.main.temp)
 
@@ -85,7 +87,7 @@ return (
         </section>
 
 
-        <button onClick={handleChangeUnitTemp} className="mt-4 p-2 bg-blue-500 text-white dark:bg-white dark:text-blue-500  rounded-2xl hover:bg-white hover:text-blue-500 ">{isCelsius?"Cambiar a Fº":"Cambiar a Cº"}</button>
+        <button onClick={handleChangeUnitTemp} className="mt-4 p-2 bg-blue-500 text-white dark:bg-white dark:text-blue-500  rounded-2xl hover:bg-white hover:text-blue-500 ">{lenguageIcon? resultChangeEs: resultChangeUs}</button>
     </section>
 )
 }
