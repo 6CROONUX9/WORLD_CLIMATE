@@ -65,7 +65,7 @@ return (
         </section>
 
 
-        <button onClick={handleChangeUnitTemp} className="mt-4 p-2 bg-blue-500 text-white dark:bg-white dark:text-blue-500  rounded-2xl ">{isCelsius?"Cambiar a Fº":"Cambiar a Cº"}</button>
+        <button onClick={handleChangeUnitTemp} className="mt-4 p-2 bg-blue-500 text-white dark:bg-white dark:text-blue-500  rounded-2xl hover:bg-white hover:text-blue-500 ">{isCelsius?"Cambiar a Fº":"Cambiar a Cº"}</button>
     </section>
 )
 }

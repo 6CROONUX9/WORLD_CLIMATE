@@ -146,10 +146,10 @@ function App() {
           />
 
           <div className="absolute top-[4px] left-[165px]">
-            <i className="bx bx-world   text-2xl text-slate-500 dark:text-white hover:bx-spin"></i>
+            <i className="bx bx-world  hover:animate-wiggle  text-2xl text-slate-500 dark:text-white  hover:text-blue-500"></i>
           </div>
 
-          <button className="bg-blue-500 text-white dark:bg-white dark:text-blue-500 px-4 ">
+          <button className="bg-blue-500 text-white dark:bg-white dark:text-blue-500 px-4 hover:bg-white hover:text-blue-500 border-2 border-transparent hover:border-2 hover:border-blue-500 ">
             Buscar
           </button>
 
