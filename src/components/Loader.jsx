@@ -1,8 +1,8 @@
 const Loader = () => {
   return (
     <section className="h-screen w-full dark:bg-white/60 bg-slate-500/60 absolute flex flex-col gap-4 justify-center items-center">
-        <img src="/images/imgLoader.png" alt="" />
-        
+        <img className="animate-wiggle" src="/images/logoLoader.png" alt="" />
+        {/* <img src="/images/imgLoader.png" alt="" /> */}
         <div className="flex">
         <div className=" h-[50px] w-[50px] animate-bounceD1000 flex justify-center items-center text-8xl   ">
         <img src="/images/img4.png" alt="" />
